@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const str = '<a href="">哈哈</a>';
+const str1 = 'wen'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <>
+    <h1 className={ str1 }>hello world</h1>
+    { str1 }
+    <p dangerouslySetInnerHTML={{__html: str}}></p>
+  </>,
+  document.getElementById('root')
+)
